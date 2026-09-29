@@ -113,11 +113,12 @@ public class Square : Rectangle
         get { return base.Height; }
         set { base.Height = value; base.Width = value; }
     }
-    public interface IShape
+}
+public interface IShape
     {
         double GetArea();
     }
-    public class Rectangle : IShape
+public class Rectangle : IShape
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -127,7 +128,6 @@ public class Square : Rectangle
             return Width * Height;
         }
     }
-}
 // I — Interface Segregation Principle (Принцип розділення інтерфейсів)
 public interface IWorkable
 {
